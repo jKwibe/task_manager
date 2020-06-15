@@ -5,6 +5,15 @@ class TasksController < ApplicationController
   end
 
   def new
+
+  end
+
+  def create
     
+    task = Task.new({
+      title: params[:task][:title],
+      description: params[:task][:description]
+      })
+      binding.pry
   end
 end
