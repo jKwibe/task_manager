@@ -1,0 +1,8 @@
+<form class="" action="/tasks/<%= @task.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+  <input type="hidden" name="_method" value="PATCH">
+  <p>Edit Task</p>
+  <input type='text' name='task[title]' placeholder="title" value="<%= @task.title %>"/> <br/><br/>
+  <textarea name='task[description]' rows="8" cols="80" placeholder="Description"><%= @task.description %></textarea> <br/><br/>
+  <input type="submit" value="Edit"/>
+</form>
